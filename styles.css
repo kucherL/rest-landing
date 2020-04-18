@@ -1,0 +1,413 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(53, 64, 70, 0.6) 70%, transparent), url("./assets/background-brooke-lark.jpg") bottom/cover no-repeat border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header .header__logo {
+  animation: zoomIn 700ms cubic-bezier(0, 0, 0.42, 0.4);
+  width: 10rem;
+  display: inline-block;
+}
+.header .header__text {
+  animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
+  font-size: 1.4rem;
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
+  color: #d2d2d2;
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem auto;
+  animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
+}
+.contact-links .contact-link {
+  width: 3rem;
+  height: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.contact-links .contact-link a {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+  border: 2px solid #d2d2d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-links .contact-link a i {
+  color: #d2d2d2;
+}
+.contact-links .contact-link:hover {
+  background-color: rgba(87, 155, 18, 0.7);
+}
+
+.nav {
+  padding: 1rem 1rem;
+  background-color: #579b12;
+  z-index: 1;
+}
+.nav .toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 0;
+  padding-top: 0;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.nav .toggle-button .toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #f5f4f4;
+  display: block;
+  margin: 0.6rem 0;
+}
+.nav .toggle-button:focus {
+  outline: none;
+}
+.nav .nav__items {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav .nav__items .nav__item {
+  margin: 0.5rem auto;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.nav .nav__items .nav__item a {
+  text-decoration: none;
+  color: #f5f4f4;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+main {
+  background: #354046;
+}
+
+.section__title {
+  color: #f5f4f4;
+  text-align: center;
+  padding: 1rem;
+}
+
+.section__subtitle {
+  color: #d2d2d2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.section__text {
+  color: #d2d2d2;
+  padding: 1rem;
+  width: 90%;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.main-info__container {
+  display: flex;
+  flex-direction: column;
+}
+.main-info__container .main-info__image {
+  width: 100%;
+  margin: 1rem auto;
+}
+.main-info__container .main-info__subtitle {
+  color: #579b12;
+  padding-left: 1rem;
+}
+.main-info__container .main-info__list {
+  list-style: none;
+  padding: 0;
+  margin-left: 1rem;
+}
+.main-info__container .main-info__list .main-info__item {
+  display: flex;
+  align-items: center;
+}
+.main-info__container .main-info__list .main-info__item i {
+  color: #d2d2d2;
+}
+
+#services {
+  background-color: #579b12;
+}
+#services .service__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem auto;
+}
+#services .service__container .services__icon {
+  color: #f5f4f4;
+  height: 3rem;
+  width: 4rem;
+  border-bottom: 1px dashed yellow;
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0;
+}
+#services .service__container .service__title {
+  color: #f5f4f4;
+  font-weight: bold;
+}
+#services .service__container .service__description {
+  text-align: center;
+  color: #f5f4f4;
+}
+
+.menu-section__list {
+  margin: auto 1rem;
+  list-style: none;
+}
+.menu-section__list .menu-section__list__half {
+  background-color: rgba(42, 50, 54, 0.5);
+  width: 100%;
+}
+.menu-section__list .menu-section__list__half .menu-section__item {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__name {
+  padding-bottom: 0;
+}
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__description {
+  padding: 0 2rem;
+  font-style: italic;
+  color: #579b12;
+}
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__description:last-child {
+  padding-bottom: 1rem;
+}
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__price {
+  color: #579b12;
+  text-align: end;
+}
+
+.testimonial__person-info {
+  display: flex;
+  flex-direction: column;
+}
+.testimonial__person-info .testimonial__image {
+  margin: 1rem 1rem;
+  height: 10rem;
+  width: 10rem;
+}
+.testimonial__person-info .testimonial__name {
+  margin: 0 1rem;
+  color: #f5f4f4;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+}
+.contacts__container .contacts__text {
+  color: #f5f4f4;
+  padding: 0 2rem;
+}
+.contacts__container .form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+}
+.contacts__container .form .form__item {
+  padding: 0.3rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: #354046;
+  color: #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  margin-bottom: 1rem;
+}
+.contacts__container .form .form__item:focus {
+  outline: 0;
+  border-color: #579b12;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 238, 108, 0.6);
+}
+.contacts__container .form .form__item::placeholder {
+  color: #d2d2d2;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.8rem;
+}
+.contacts__container .form .form__input-text {
+  height: 5rem;
+}
+.contacts__container .form .form__button {
+  width: 5rem;
+  height: 1rem;
+  background-color: #579b12;
+  align-self: flex-end;
+  color: #d2d2d2;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.3rem;
+}
+.contacts__container .form .form__button:active {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.footer {
+  background-color: #354046;
+}
+.footer p {
+  padding: 1rem;
+  text-align: center;
+  color: #d2d2d2;
+}
+
+@media (min-width: 50rem) {
+  .contact-links {
+    justify-content: center;
+  }
+  .contact-links .contact-link {
+    margin: 0 2rem;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .nav .nav__items {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main-info__container .main-info__subcontainer {
+    display: flex;
+    align-items: center;
+  }
+  .main-info__container .main-info__subcontainer .main-info__image {
+    width: 60%;
+    margin: 1rem 1rem;
+  }
+  .main-info__container .main-info__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .services__container {
+    display: flex;
+  }
+
+  .menu-section__list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu-section__list .menu-section__list__half {
+    width: 45%;
+  }
+
+  .testimonial__container {
+    display: flex;
+  }
+  .testimonial__container .testimonial__person-info {
+    width: 80%;
+    align-items: center;
+  }
+
+  .contacts__container {
+    flex-direction: row;
+  }
+  .contacts__container .contacts__subcontainer {
+    width: 50%;
+  }
+  .contacts__container .contacts__subcontainer .contact-links {
+    justify-content: start;
+    margin-left: 2rem;
+  }
+  .contacts__container .contacts__subcontainer .contact-links .contact-link {
+    margin: 0 0.2rem;
+  }
+  .contacts__container .form {
+    width: 50%;
+  }
+  .contacts__container .form .form__input-text {
+    height: 12rem;
+  }
+}
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappearance {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dropdown {
+  from {
+    height: 5rem;
+  }
+  to {
+    height: 18rem;
+  }
+}
+@keyframes dropup {
+  from {
+    height: 18rem;
+  }
+  to {
+    height: 5rem;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 5rem;
+  }
+  100% {
+    width: 10rem;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate(1rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

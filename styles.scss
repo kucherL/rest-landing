@@ -1,0 +1,477 @@
+@import "_varibles.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(53, 64, 70, 0.6) 70%, transparent),
+    url("./assets/background-brooke-lark.jpg") bottom/cover no-repeat border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .header__logo {
+    animation: $zoomIn-animation;
+    width: 10rem;
+    display: inline-block;
+  }
+
+  .header__text {
+    animation: $appearance-animation;
+    font-size: 1.4rem;
+    margin: 2rem auto;
+    width: 80%;
+    text-align: center;
+    color: $text-color;
+  }
+}
+
+.contact-links {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem auto;
+  animation: $appearance-animation;
+
+  .contact-link {
+    width: 3rem;
+    height: inherit;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    a {
+      display: inline-block;
+      width: inherit;
+      height: inherit;
+      cursor: pointer;
+      border: 2px solid $text-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        color: $text-color;
+      }
+    }
+  }
+
+  .contact-link:hover {
+    background-color: rgba(87, 155, 18, 0.7);
+  }
+}
+
+.nav {
+  padding: 1rem 1rem;
+  background-color: $accent-color;
+  z-index: 1;
+
+  .toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-bottom: 0;
+    padding-top: 0;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    .toggle-button__bar {
+      width: 100%;
+      height: 0.2rem;
+      background-color: $titles-color;
+      display: block;
+      margin: 0.6rem 0;
+    }
+  }
+
+  .toggle-button:focus {
+    outline: none;
+  }
+
+  .nav__items {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .nav__item {
+      margin: 0.5rem auto;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+      a {
+        text-decoration: none;
+        color: $titles-color;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+main {
+  background: $background-color;
+}
+
+.section__title {
+  color: $titles-color;
+  text-align: center;
+  padding: 1rem;
+}
+
+.section__subtitle {
+  color: $text-color;
+  text-align: center;
+  padding: 1rem;
+}
+
+.section__text {
+  color: $text-color;
+  padding: 1rem;
+  width: 90%;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.main-info__container {
+  display: flex;
+  flex-direction: column;
+
+  .main-info__image {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .main-info__subtitle {
+    color: $accent-color;
+    padding-left: 1rem;
+  }
+
+  .main-info__list {
+    list-style: none;
+    padding: 0;
+    margin-left: 1rem;
+
+    .main-info__item {
+      display: flex;
+      align-items: center;
+
+      i {
+        color: $text-color;
+      }
+    }
+  }
+}
+
+#services {
+  background-color: $accent-color;
+
+  .service__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+
+    .services__icon {
+      color: $titles-color;
+      height: 3rem;
+      width: 4rem;
+      border-bottom: 1px dashed yellow;
+      text-align: center;
+      margin-bottom: 1rem;
+      opacity: 0;
+    }
+
+    .service__title {
+      color: $titles-color;
+      font-weight: bold;
+    }
+
+    .service__description {
+      text-align: center;
+      color: $titles-color;
+    }
+  }
+}
+
+.menu-section__list {
+  margin: auto 1rem;
+  list-style: none;
+
+  .menu-section__list__half {
+    background-color: $background-menu-color;
+    width: 100%;
+
+    .menu-section__item {
+      display: flex;
+      justify-content: space-between;
+
+      .menu-section__item__name {
+        padding-bottom: 0;
+      }
+
+      .menu-section__item__description {
+        padding: 0 2rem;
+        font-style: italic;
+        color: $accent-color;
+      }
+
+      .menu-section__item__description:last-child {
+        padding-bottom: 1rem;
+      }
+
+      .menu-section__item__price {
+        color: $accent-color;
+        text-align: end;
+      }
+    }
+  }
+}
+
+.testimonial__person-info {
+  display: flex;
+  flex-direction: column;
+
+  .testimonial__image {
+    margin: 1rem 1rem;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .testimonial__name {
+    margin: 0 1rem;
+    color: $titles-color;
+  }
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+
+  .contacts__text {
+    color: $titles-color;
+    padding: 0 2rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+
+    .form__item {
+      padding: 0.3rem;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      background-color: $background-color;
+      color: $text-color;
+      border-bottom: 1px solid $text-color;
+      margin-bottom: 1rem;
+    }
+
+    .form__item:focus {
+      outline: 0;
+      border-color: $accent-color;
+      box-shadow: $border-color;
+    }
+
+    .form__item::placeholder {
+      color: $text-color;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 0.8rem;
+    }
+
+    .form__input-text {
+      height: 5rem;
+    }
+
+    .form__button {
+      width: 5rem;
+      height: 1rem;
+      background-color: $accent-color;
+      align-self: flex-end;
+      color: $text-color;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.3rem;
+    }
+
+    .form__button:active {
+      outline: none;
+    }
+  }
+}
+
+.footer {
+  background-color: $background-color;
+
+  p {
+    padding: 1rem;
+    text-align: center;
+    color: $text-color;
+  }
+}
+
+@media (min-width: 50rem) {
+  .contact-links {
+    justify-content: center;
+
+    .contact-link {
+      margin: 0 2rem;
+    }
+  }
+
+  .toggle-button {
+    display: none;
+  }
+  .nav {
+    .nav__items {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .main-info__container {
+    .main-info__subcontainer {
+      .main-info__image {
+        width: 60%;
+        margin: 1rem 1rem;
+      }
+
+      display: flex;
+      align-items: center;
+    }
+
+    .main-info__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  .services__container {
+    display: flex;
+  }
+
+  .menu-section__list {
+    display: flex;
+    justify-content: space-around;
+
+    .menu-section__list__half {
+      width: 45%;
+    }
+  }
+
+  .testimonial__container {
+    display: flex;
+
+    .testimonial__person-info {
+      width: 80%;
+      align-items: center;
+    }
+  }
+
+  .contacts__container {
+    flex-direction: row;
+
+    .contacts__subcontainer {
+      width: 50%;
+
+      .contact-links {
+        justify-content: start;
+        margin-left: 2rem;
+
+        .contact-link {
+          margin: 0 0.2rem;
+        }
+      }
+    }
+
+    .form {
+      width: 50%;
+
+      .form__input-text {
+        height: 12rem;
+      }
+    }
+  }
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappearance {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dropdown {
+  from {
+    height: 5rem;
+  }
+
+  to {
+    height: 18rem;
+  }
+}
+
+@keyframes dropup {
+  from {
+    height: 18rem;
+  }
+
+  to {
+    height: 5rem;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 5rem;
+  }
+
+  100% {
+    width: 10rem;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate(1rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
