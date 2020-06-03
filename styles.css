@@ -15,6 +15,7 @@
 html {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4rem;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -401,6 +402,10 @@ main {
 .footer p {
   padding: 1rem;
   text-align: center;
+  color: #d2d2d2;
+}
+.footer a {
+  text-decoration: none;
   color: #d2d2d2;
 }
 
