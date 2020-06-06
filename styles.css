@@ -1,12 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,40 +13,18 @@ html {
 .header {
   width: 100%;
   height: 100vh;
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(70%, rgba(53, 64, 70, 0.6)),
-      to(transparent)
-    ),
-    url("./assets/background-brooke-lark.jpg") bottom/cover no-repeat border-box;
-  background: -o-linear-gradient(bottom, rgba(53, 64, 70, 0.6) 70%, transparent),
-    url("./assets/background-brooke-lark.jpg") bottom/cover no-repeat border-box;
-  background: linear-gradient(to top, rgba(53, 64, 70, 0.6) 70%, transparent),
-    url("./assets/background-brooke-lark.jpg") bottom/cover no-repeat border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background: linear-gradient(to top, rgba(53, 64, 70, 0.6) 70%, transparent), url("./assets/background-brooke-lark.jpg") bottom/cover no-repeat border-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .header .header__logo {
-  -webkit-animation: zoomIn 700ms cubic-bezier(0, 0, 0.42, 0.4);
   animation: zoomIn 700ms cubic-bezier(0, 0, 0.42, 0.4);
   width: 10rem;
   display: inline-block;
 }
 .header .header__text {
-  -webkit-animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
   animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
   font-size: 1.4rem;
   margin: 2rem auto;
@@ -65,19 +35,12 @@ html {
 
 .contact-links {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 3rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  margin: 1rem auto;
-  -webkit-animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
+  margin: 0.5rem auto;
   animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
 }
 .contact-links .contact-link {
@@ -91,14 +54,8 @@ html {
   height: inherit;
   cursor: pointer;
   border: 2px solid #d2d2d2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .contact-links .contact-link a i {
@@ -109,12 +66,12 @@ html {
 }
 
 .nav {
-  padding: 1rem 1rem;
   background-color: #579b12;
   z-index: 1;
 }
 .nav .toggle-button {
-  width: 3rem;
+  margin-left: 1rem;
+  width: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -128,7 +85,7 @@ html {
   height: 0.2rem;
   background-color: #f5f4f4;
   display: block;
-  margin: 0.6rem 0;
+  margin: 0.5rem 0;
 }
 .nav .toggle-button:focus {
   outline: none;
@@ -136,14 +93,8 @@ html {
 .nav .nav__items {
   list-style: none;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-pack: distribute;
   justify-content: space-around;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .nav .nav__items .nav__item {
@@ -154,7 +105,6 @@ html {
   text-decoration: none;
   color: #f5f4f4;
   font-weight: bold;
-  font-size: 1.3rem;
 }
 
 main {
@@ -182,12 +132,7 @@ main {
 }
 
 .main-info__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 .main-info__container .main-info__image {
@@ -204,11 +149,7 @@ main {
   margin-left: 1rem;
 }
 .main-info__container .main-info__list .main-info__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .main-info__container .main-info__list .main-info__item i {
@@ -219,15 +160,8 @@ main {
   background-color: #579b12;
 }
 #services .service__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 1rem auto;
 }
@@ -258,52 +192,31 @@ main {
   width: 100%;
 }
 .menu-section__list .menu-section__list__half .menu-section__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.menu-section__list
-  .menu-section__list__half
-  .menu-section__item
-  .menu-section__item__name {
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__name {
   padding-bottom: 0;
 }
-.menu-section__list
-  .menu-section__list__half
-  .menu-section__item
-  .menu-section__item__description {
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__description {
   padding: 0 2rem;
   font-style: italic;
   color: #579b12;
 }
-.menu-section__list
-  .menu-section__list__half
-  .menu-section__item
-  .menu-section__item__description:last-child {
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__description:last-child {
   padding-bottom: 1rem;
 }
-.menu-section__list
-  .menu-section__list__half
-  .menu-section__item
-  .menu-section__item__price {
+.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__price {
   color: #579b12;
   text-align: end;
 }
 
 .testimonial__person-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 .testimonial__person-info .testimonial__image {
-  margin: 1rem 1rem;
+  margin: 1rem;
   height: 10rem;
   width: 10rem;
 }
@@ -313,12 +226,7 @@ main {
 }
 
 .contacts__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 .contacts__container .contacts__text {
@@ -326,14 +234,12 @@ main {
   padding: 0 2rem;
 }
 .contacts__container .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  margin: 1rem 1rem;
+  margin: 1rem 2rem;
+}
+.contacts__container .form h3 {
+  margin-left: -2rem;
 }
 .contacts__container .form .form__item {
   padding: 0.3rem;
@@ -348,29 +254,7 @@ main {
 .contacts__container .form .form__item:focus {
   outline: 0;
   border-color: #579b12;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075),
-    0 0 8px rgba(173, 238, 108, 0.6);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 238, 108, 0.6);
-}
-.contacts__container .form .form__item::-webkit-input-placeholder {
-  color: #d2d2d2;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.8rem;
-}
-.contacts__container .form .form__item::-moz-placeholder {
-  color: #d2d2d2;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.8rem;
-}
-.contacts__container .form .form__item:-ms-input-placeholder {
-  color: #d2d2d2;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.8rem;
-}
-.contacts__container .form .form__item::-ms-input-placeholder {
-  color: #d2d2d2;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.8rem;
 }
 .contacts__container .form .form__item::placeholder {
   color: #d2d2d2;
@@ -384,7 +268,6 @@ main {
   width: 5rem;
   height: 1rem;
   background-color: #579b12;
-  -ms-flex-item-align: end;
   align-self: flex-end;
   color: #d2d2d2;
   font-weight: bold;
@@ -393,7 +276,6 @@ main {
 }
 .contacts__container .form .form__button:active {
   outline: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .footer {
@@ -404,15 +286,13 @@ main {
   text-align: center;
   color: #d2d2d2;
 }
-.footer a {
+.footer p a {
   text-decoration: none;
   color: #d2d2d2;
 }
 
 @media (min-width: 50rem) {
   .contact-links {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .contact-links .contact-link {
@@ -424,21 +304,12 @@ main {
   }
 
   .nav .nav__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
 
   .main-info__container .main-info__subcontainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   .main-info__container .main-info__subcontainer .main-info__image {
@@ -446,27 +317,17 @@ main {
     margin: 1rem 1rem;
   }
   .main-info__container .main-info__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
 
   .services__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
   .menu-section__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   .menu-section__list .menu-section__list__half {
@@ -474,29 +335,20 @@ main {
   }
 
   .testimonial__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .testimonial__container .testimonial__person-info {
     width: 80%;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
 
   .contacts__container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
     flex-direction: row;
   }
   .contacts__container .contacts__subcontainer {
     width: 50%;
   }
   .contacts__container .contacts__subcontainer .contact-links {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: start;
     margin-left: 2rem;
   }
@@ -510,14 +362,6 @@ main {
     height: 12rem;
   }
 }
-@-webkit-keyframes appearance {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes appearance {
   from {
     opacity: 0;
@@ -526,63 +370,20 @@ main {
     opacity: 1;
   }
 }
-@-webkit-keyframes disappearance {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes disappearance {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@-webkit-keyframes dropdown {
-  from {
-    height: 5rem;
-  }
-  to {
-    height: 18rem;
-  }
-}
 @keyframes dropdown {
   from {
-    height: 5rem;
+    height: 3rem;
   }
   to {
-    height: 18rem;
-  }
-}
-@-webkit-keyframes dropup {
-  from {
-    height: 18rem;
-  }
-  to {
-    height: 5rem;
+    height: 14rem;
   }
 }
 @keyframes dropup {
   from {
-    height: 18rem;
+    height: 14rem;
   }
   to {
-    height: 5rem;
-  }
-}
-@-webkit-keyframes zoomIn {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 5rem;
-  }
-  100% {
-    width: 10rem;
+    height: 3rem;
   }
 }
 @keyframes zoomIn {
@@ -596,27 +397,13 @@ main {
     width: 10rem;
   }
 }
-@-webkit-keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(1rem, 0);
-    transform: translate(1rem, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-}
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translate(1rem, 0);
     transform: translate(1rem, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
   }
 }

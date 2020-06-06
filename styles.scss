@@ -9,6 +9,7 @@
 html {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4rem;
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -44,7 +45,7 @@ html {
   height: 3rem;
   align-items: center;
   justify-content: space-evenly;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   animation: $appearance-animation;
 
   .contact-link {
@@ -74,12 +75,12 @@ html {
 }
 
 .nav {
-  padding: 1rem 1rem;
   background-color: $accent-color;
   z-index: 1;
 
   .toggle-button {
-    width: 3rem;
+    margin-left: 1rem;
+    width: 2.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -93,7 +94,7 @@ html {
       height: 0.2rem;
       background-color: $titles-color;
       display: block;
-      margin: 0.6rem 0;
+      margin: 0.5rem 0;
     }
   }
 
@@ -116,7 +117,6 @@ html {
         text-decoration: none;
         color: $titles-color;
         font-weight: bold;
-        font-size: 1.3rem;
       }
     }
   }
@@ -246,7 +246,7 @@ main {
   flex-direction: column;
 
   .testimonial__image {
-    margin: 1rem 1rem;
+    margin: 1rem;
     height: 10rem;
     width: 10rem;
   }
@@ -269,7 +269,11 @@ main {
   .form {
     display: flex;
     flex-direction: column;
-    margin: 1rem 1rem;
+    margin: 1rem 2rem;
+
+    h3 {
+      margin-left: -2rem;
+    }
 
     .form__item {
       padding: 0.3rem;
@@ -322,6 +326,11 @@ main {
     padding: 1rem;
     text-align: center;
     color: $text-color;
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+    }
   }
 }
 
@@ -420,33 +429,23 @@ main {
   }
 }
 
-@keyframes disappearance {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
 @keyframes dropdown {
   from {
-    height: 5rem;
+    height: 3rem;
   }
 
   to {
-    height: 18rem;
+    height: 14rem;
   }
 }
 
 @keyframes dropup {
   from {
-    height: 18rem;
+    height: 14rem;
   }
 
   to {
-    height: 5rem;
+    height: 3rem;
   }
 }
 
