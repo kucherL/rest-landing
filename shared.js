@@ -22,8 +22,6 @@ toggleButton.addEventListener("click", () => {
   }
 });
 
-console.log(navItems);
-
 for (let item of navItems) {
   item.addEventListener("click", () => {
     if (dropdown.classList.contains("open")) {
