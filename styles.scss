@@ -22,13 +22,13 @@ html {
   align-items: center;
   justify-content: center;
 
-  .header__logo {
+  &__logo {
     animation: $zoomIn-animation;
     width: 10rem;
     display: inline-block;
   }
 
-  .header__text {
+  &__text {
     animation: $appearance-animation;
     font-size: 1.4rem;
     margin: 2rem auto;
@@ -67,10 +67,10 @@ html {
         color: $text-color;
       }
     }
-  }
 
-  .contact-link:hover {
-    background-color: rgba(87, 155, 18, 0.7);
+    &:hover {
+      background-color: rgba(87, 155, 18, 0.7);
+    }
   }
 }
 
@@ -89,35 +89,35 @@ html {
     vertical-align: middle;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-    .toggle-button__bar {
+    &__bar {
       width: 100%;
       height: 0.2rem;
       background-color: $titles-color;
       display: block;
       margin: 0.5rem 0;
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .toggle-button:focus {
-    outline: none;
-  }
-
-  .nav__items {
+  &__items {
     list-style: none;
     display: none;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+  }
 
-    .nav__item {
-      margin: 0.5rem auto;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &__item {
+    margin: 0.5rem auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-      a {
-        text-decoration: none;
-        color: $titles-color;
-        font-weight: bold;
-      }
+    a {
+      text-decoration: none;
+      color: $titles-color;
+      font-weight: bold;
     }
   }
 }
@@ -211,7 +211,7 @@ main {
   margin: auto 1rem;
   list-style: none;
 
-  .menu-section__list__half {
+  &__half {
     background-color: $background-menu-color;
     width: 100%;
 
@@ -219,21 +219,21 @@ main {
       display: flex;
       justify-content: space-between;
 
-      .menu-section__item__name {
+      &__name {
         padding-bottom: 0;
       }
 
-      .menu-section__item__description {
+      &__description {
         padding: 0 2rem;
         font-style: italic;
         color: $accent-color;
       }
 
-      .menu-section__item__description:last-child {
+      &__description:last-child {
         padding-bottom: 1rem;
       }
 
-      .menu-section__item__price {
+      &__price {
         color: $accent-color;
         text-align: end;
       }
@@ -275,7 +275,7 @@ main {
       margin-left: -2rem;
     }
 
-    .form__item {
+    &__item {
       padding: 0.3rem;
       border-top: none;
       border-left: none;
@@ -286,23 +286,23 @@ main {
       margin-bottom: 1rem;
     }
 
-    .form__item:focus {
+    &__item:focus {
       outline: 0;
       border-color: $accent-color;
       box-shadow: $border-color;
     }
 
-    .form__item::placeholder {
+    &__item::placeholder {
       color: $text-color;
       font-family: "Cormorant Garamond", serif;
       font-size: 0.8rem;
     }
 
-    .form__input-text {
+    &__input-text {
       height: 5rem;
     }
 
-    .form__button {
+    &__button {
       width: 5rem;
       height: 1rem;
       background-color: $accent-color;
@@ -311,9 +311,10 @@ main {
       font-weight: bold;
       border: none;
       border-radius: 0.3rem;
+      cursor: pointer;
     }
 
-    .form__button:active {
+    &__button:active {
       outline: none;
     }
   }
@@ -347,7 +348,7 @@ main {
     display: none;
   }
   .nav {
-    .nav__items {
+    &__items {
       display: flex;
       flex-direction: row;
     }
@@ -379,7 +380,7 @@ main {
     display: flex;
     justify-content: space-around;
 
-    .menu-section__list__half {
+    &__half {
       width: 45%;
     }
   }
@@ -412,7 +413,7 @@ main {
     .form {
       width: 50%;
 
-      .form__input-text {
+      &__input-text {
         height: 12rem;
       }
     }
@@ -439,7 +440,7 @@ main {
   }
 }
 
-@keyframes dropup {
+@keyframes raise {
   from {
     height: 14rem;
   }

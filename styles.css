@@ -19,12 +19,12 @@ html {
   align-items: center;
   justify-content: center;
 }
-.header .header__logo {
+.header__logo {
   animation: zoomIn 700ms cubic-bezier(0, 0, 0.42, 0.4);
   width: 10rem;
   display: inline-block;
 }
-.header .header__text {
+.header__text {
   animation: appearance 700ms cubic-bezier(0, 0, 0.42, 0.4);
   font-size: 1.4rem;
   margin: 2rem auto;
@@ -80,7 +80,7 @@ html {
   vertical-align: middle;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.nav .toggle-button .toggle-button__bar {
+.nav .toggle-button__bar {
   width: 100%;
   height: 0.2rem;
   background-color: #f5f4f4;
@@ -90,18 +90,18 @@ html {
 .nav .toggle-button:focus {
   outline: none;
 }
-.nav .nav__items {
+.nav__items {
   list-style: none;
   display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
-.nav .nav__items .nav__item {
+.nav__item {
   margin: 0.5rem auto;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.nav .nav__items .nav__item a {
+.nav__item a {
   text-decoration: none;
   color: #f5f4f4;
   font-weight: bold;
@@ -187,26 +187,26 @@ main {
   margin: auto 1rem;
   list-style: none;
 }
-.menu-section__list .menu-section__list__half {
+.menu-section__list__half {
   background-color: rgba(42, 50, 54, 0.5);
   width: 100%;
 }
-.menu-section__list .menu-section__list__half .menu-section__item {
+.menu-section__list__half .menu-section__item {
   display: flex;
   justify-content: space-between;
 }
-.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__name {
+.menu-section__list__half .menu-section__item__name {
   padding-bottom: 0;
 }
-.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__description {
+.menu-section__list__half .menu-section__item__description {
   padding: 0 2rem;
   font-style: italic;
   color: #579b12;
 }
-.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__description:last-child {
+.menu-section__list__half .menu-section__item__description:last-child {
   padding-bottom: 1rem;
 }
-.menu-section__list .menu-section__list__half .menu-section__item .menu-section__item__price {
+.menu-section__list__half .menu-section__item__price {
   color: #579b12;
   text-align: end;
 }
@@ -241,7 +241,7 @@ main {
 .contacts__container .form h3 {
   margin-left: -2rem;
 }
-.contacts__container .form .form__item {
+.contacts__container .form__item {
   padding: 0.3rem;
   border-top: none;
   border-left: none;
@@ -251,20 +251,20 @@ main {
   border-bottom: 1px solid #d2d2d2;
   margin-bottom: 1rem;
 }
-.contacts__container .form .form__item:focus {
+.contacts__container .form__item:focus {
   outline: 0;
   border-color: #579b12;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(173, 238, 108, 0.6);
 }
-.contacts__container .form .form__item::placeholder {
+.contacts__container .form__item::placeholder {
   color: #d2d2d2;
   font-family: "Cormorant Garamond", serif;
   font-size: 0.8rem;
 }
-.contacts__container .form .form__input-text {
+.contacts__container .form__input-text {
   height: 5rem;
 }
-.contacts__container .form .form__button {
+.contacts__container .form__button {
   width: 5rem;
   height: 1rem;
   background-color: #579b12;
@@ -273,8 +273,9 @@ main {
   font-weight: bold;
   border: none;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
-.contacts__container .form .form__button:active {
+.contacts__container .form__button:active {
   outline: none;
 }
 
@@ -303,7 +304,7 @@ main {
     display: none;
   }
 
-  .nav .nav__items {
+  .nav__items {
     display: flex;
     flex-direction: row;
   }
@@ -330,7 +331,7 @@ main {
     display: flex;
     justify-content: space-around;
   }
-  .menu-section__list .menu-section__list__half {
+  .menu-section__list__half {
     width: 45%;
   }
 
@@ -358,7 +359,7 @@ main {
   .contacts__container .form {
     width: 50%;
   }
-  .contacts__container .form .form__input-text {
+  .contacts__container .form__input-text {
     height: 12rem;
   }
 }
@@ -378,7 +379,7 @@ main {
     height: 14rem;
   }
 }
-@keyframes dropup {
+@keyframes raise {
   from {
     height: 14rem;
   }

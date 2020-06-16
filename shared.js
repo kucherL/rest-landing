@@ -1,50 +1,69 @@
-let dropdown = document.querySelector(".nav__items");
-let toggleButton = document.querySelector(".toggle-button");
-let socialLinks = document.querySelector(".contact-links");
-let navBar = document.querySelector(".nav");
-let header = document.querySelector(".header");
-let mainInfo = document.getElementById("main-info");
-let sectionText = document.querySelectorAll(".section__text");
-let servicesIcons = document.querySelectorAll(".services__icon");
-let navItems = document.getElementsByClassName("nav__item");
+const dropdown = document.querySelector(".nav__items");
+const toggleButton = document.querySelector(".toggle-button");
+const socialLinks = document.querySelector(".contact-links");
+const navBar = document.querySelector(".nav");
+const header = document.querySelector(".header");
+const mainInfo = document.getElementById("main-info");
+const sectionText = document.querySelectorAll(".section__text");
+const servicesIcons = document.querySelectorAll(".services__icon");
+const navItems = document.querySelectorAll(".nav__item");
 
-toggleButton.addEventListener("click", () => {
+// Closes and opens the navigation menu
+const closeAndOpenMenu = () => {
   if (dropdown.classList.contains("open")) {
-    navBar.style.animation = "dropup 0.2s linear";
+    navBar.style.animation = "raise 0.1s linear";
     dropdown.removeAttribute("style", "display:flex");
     dropdown.classList.remove("open");
   } else {
-    navBar.style.animation = "dropdown 0.2s linear";
+    navBar.style.animation = "dropdown 0.1s linear";
     dropdown.setAttribute("style", "display:flex");
-    dropdown.style.animation =
-      "appearance 0.3s cubic-bezier(0.2, 0.48, 0.76, 0.29)";
+    dropdown.style.animation = "appearance 0.3s linear";
     dropdown.classList.add("open");
   }
+};
+
+// Opens and closes the navigation menu with a click on the toggle button
+toggleButton.addEventListener("click", () => {
+  closeAndOpenMenu();
 });
 
+// Closes the navigation menu with a click on the navigation item
 for (let item of navItems) {
   item.addEventListener("click", () => {
-    if (dropdown.classList.contains("open")) {
-      navBar.style.animation = "dropup 0.2s linear";
-      dropdown.removeAttribute("style", "display:flex");
-      dropdown.classList.remove("open");
-    }
+    closeAndOpenMenu();
   });
 }
 
 let isScrolling = false;
 
-const throttleScroll = (e) => {
+// Checks scrolling
+const throttleScroll = () => {
   if (isScrolling === false) {
     window.requestAnimationFrame(() => {
-      scrolling(e);
+      stickingHeader();
+      addAnimation();
       isScrolling = false;
     });
   }
   isScrolling = true;
 };
 
-const scrolling = () => {
+// Checks if the element is on top of the viewport
+const isElementAtTop = (el) => {
+  let elBoundary = el.getBoundingClientRect();
+  let top = elBoundary.top;
+  return top <= 0;
+};
+
+// Checks if the element is at bottom of the viewport
+const isElementAtBottom = (el) => {
+  let elBoundary = el.getBoundingClientRect();
+  let bottom = elBoundary.bottom;
+  return bottom >= 0;
+};
+
+// Sticks navigation menu, if it's on top of the viewport, and unsticks if not
+const stickingHeader = () => {
   if (isElementAtTop(navBar)) {
     mainInfo.setAttribute("style", "margin-top:2.8rem");
     navBar.setAttribute("style", "position:fixed; top:0; width:100%");
@@ -53,39 +72,31 @@ const scrolling = () => {
     mainInfo.removeAttribute("style", "margin-top:2.8rem");
     navBar.removeAttribute("style", "position:fixed; top:0; width:100%");
   }
-  for (let i = 0; i < sectionText.length; i++) {
-    if (isFullyVisible(sectionText[i])) {
-      sectionText[i].style.animation =
-        "fadeInRight 700ms cubic-bezier(0, 0, 0.42, 0.4)";
-      sectionText[i].style.opacity = 1;
-    }
-  }
-  for (let i = 0; i < servicesIcons.length; i++) {
-    if (isFullyVisible(servicesIcons[i])) {
-      servicesIcons[i].style.animation =
-        "fadeInRight 700ms cubic-bezier(0, 0, 0.42, 0.4)";
-      servicesIcons[i].style.opacity = 1;
-    }
-  }
 };
 
-const isElementAtTop = (el) => {
-  let elBoundary = el.getBoundingClientRect();
-  let top = elBoundary.top;
-  return top <= 0;
-};
-
-const isElementAtBottom = (el) => {
-  let elBoundary = el.getBoundingClientRect();
-  let bottom = elBoundary.bottom;
-  return bottom >= 0;
-};
-
+// Checks if the element is at viewport
 const isFullyVisible = (el) => {
   let elBoundary = el.getBoundingClientRect();
   let top = elBoundary.top;
   let bottom = elBoundary.bottom;
   return top >= 0 && bottom <= window.innerHeight;
+};
+
+// Animates fragments
+const animateFragments = (fragment) => {
+  for (let i = 0; i < fragment.length; i++) {
+    if (isFullyVisible(fragment[i])) {
+      fragment[i].style.animation =
+        "fadeInRight 700ms cubic-bezier(0, 0, 0.42, 0.4)";
+      fragment[i].style.opacity = 1;
+    }
+  }
+};
+
+// Adds animation
+const addAnimation = () => {
+  animateFragments(sectionText);
+  animateFragments(servicesIcons);
 };
 
 window.addEventListener("scroll", throttleScroll, false);
